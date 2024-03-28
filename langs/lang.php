@@ -19,6 +19,6 @@ return [
     ],
     'unknownUser' => [
         'ko' => '알 수 없는 회원',
-        'en' => 'Unknown user'
-    ]
+        'en' => 'Unknown user',
+    ],
 ];

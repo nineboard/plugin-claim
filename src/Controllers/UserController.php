@@ -7,19 +7,20 @@
  * PHP version 7
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 
 namespace Xpressengine\Plugins\Claim\Controllers;
 
+use App\Http\Controllers\Controller;
+use Auth;
 use Request;
 use XePresenter;
-use Auth;
-use App\Http\Controllers\Controller;
 use Xpressengine\Plugins\Claim\Exceptions\AlreadyClaimedHttpException;
 use Xpressengine\Plugins\Claim\Handler;
 use Xpressengine\Support\Exceptions\LoginRequiredHttpException;
@@ -28,10 +29,11 @@ use Xpressengine\Support\Exceptions\LoginRequiredHttpException;
  * UserController
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 class UserController extends Controller
@@ -92,6 +94,7 @@ class UserController extends Controller
         } catch (\Exception $e) {
             throw new AlreadyClaimedHttpException;
         }
+
         return $this->index();
     }
 

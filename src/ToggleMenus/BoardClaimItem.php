@@ -7,28 +7,30 @@
  * PHP version 7
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 
 namespace Xpressengine\Plugins\Claim\ToggleMenus;
 
-use Xpressengine\ToggleMenu\AbstractToggleMenu;
-use Xpressengine\Plugins\Claim\Handler;
 use Auth;
 use XeFrontend;
+use Xpressengine\Plugins\Claim\Handler;
+use Xpressengine\ToggleMenu\AbstractToggleMenu;
 
 /**
  * BoardClaimItem
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 class BoardClaimItem extends AbstractToggleMenu
@@ -57,6 +59,7 @@ class BoardClaimItem extends AbstractToggleMenu
         } else {
             $text = xe_trans($text);
         }
+
         return $text;
     }
 
@@ -104,6 +107,7 @@ class BoardClaimItem extends AbstractToggleMenu
             'claim::msgClaimReceived',
             'claim::msgClaimCanceled',
         ]);
+
         return $action;
     }
 

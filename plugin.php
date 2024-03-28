@@ -5,10 +5,11 @@
  * PHP version 7
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 
@@ -24,10 +25,11 @@ use Xpressengine\Plugin\AbstractPlugin;
  * Plugin
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 class Plugin extends AbstractPlugin
@@ -53,7 +55,7 @@ class Plugin extends AbstractPlugin
     /**
      * activate
      *
-     * @param null $installedVersion installed version
+     * @param  null  $installedVersion  installed version
      * @return void
      */
     public function activate($installedVersion = null)
@@ -61,9 +63,9 @@ class Plugin extends AbstractPlugin
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
-    public function checkUpdated($installedVersion = NULL)
+    public function checkUpdated($installedVersion = null)
     {
         if (version_compare($installedVersion, '0.9.1', '<=')) {
             $toggleMenuId = 'module/board@board';
@@ -172,7 +174,7 @@ class Plugin extends AbstractPlugin
                 [
                     'as' => 'manage.claim.claim.index',
                     'uses' => 'ManagerController@index',
-                    'settings_menu' => 'contents.claim'
+                    'settings_menu' => 'contents.claim',
                 ]
             );
             Route::post('delete', ['as' => 'manage.claim.claim.delete', 'uses' => 'ManagerController@delete']);
@@ -215,7 +217,7 @@ class Plugin extends AbstractPlugin
                 'title' => 'xe::claim',
                 'display' => true,
                 'description' => 'blur blur~',
-                'ordering' => 5000
+                'ordering' => 5000,
             ],
         ];
         foreach ($menus as $id => $menu) {

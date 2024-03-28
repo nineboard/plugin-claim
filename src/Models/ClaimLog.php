@@ -7,22 +7,17 @@
  * PHP version 7
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 
 namespace Xpressengine\Plugins\Claim\Models;
 
-use Xpressengine\Config\ConfigEntity;
 use Xpressengine\Database\Eloquent\DynamicModel;
-use Xpressengine\Document\Exceptions\NotAllowedTypeException;
-use Xpressengine\Document\Exceptions\DocumentNotFoundException;
-use Xpressengine\Document\Exceptions\ReplyLimitationException;
-use Xpressengine\Document\Exceptions\ValueRequiredException;
-use Illuminate\Database\Eloquent\Builder as OriginBuilder;
 use Xpressengine\User\Models\User;
 
 /**
@@ -39,10 +34,11 @@ use Xpressengine\User\Models\User;
  * @property string updatedAt
  *
  * @category    Claim
- * @package     Xpressengine\Plugins\Claim
+ *
  * @author      XE Developers <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 class ClaimLog extends DynamicModel
